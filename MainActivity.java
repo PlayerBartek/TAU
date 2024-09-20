@@ -19,13 +19,16 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //wczytywanie wartości zmiennej countera po wznowieniu
+
+        //wczytywanie zmiennej po wznowieniu
         if (savedInstanceState != null) {
             licz = savedInstanceState.getInt("licz");
         }
+
         //counter
         txtCount = findViewById(R.id.textView);
         txtCount.setText("Kliknięto "+String.valueOf(licz)+" razy");
+        
         //przycisk do wyłączania przycisku i zwiększania countera o 1
         Button buttonDisable = findViewById(R.id.buttonDisable);
         buttonDisable.setOnClickListener(v -> {
